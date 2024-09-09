@@ -24,6 +24,7 @@ class ViaCepService
     public function cep(string $cep): self
     {
         $this->cep = $cep;
+
         return $this;
     }
 
@@ -34,7 +35,7 @@ class ViaCepService
             $this->response = json_decode($response->getBody()
                 ->__toString(), true);
         } catch (\Exception $exception) {
-            $this->response = ['error' => 'Erro ao buscar o CEP: ' . $exception->getMessage()];
+            $this->response = ['error' => 'Erro ao buscar o CEP: '.$exception->getMessage()];
         }
 
         return $this;

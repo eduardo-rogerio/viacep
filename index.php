@@ -6,6 +6,6 @@ use Vagrant\ViaCep\ViaCep\ViaCepService;
 
 require 'vendor/autoload.php';
 
-$service = new ViaCepService();
+$service = new ViaCepService;
 
 dump($service->cep('15625000')->fetch()->ddd());
